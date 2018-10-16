@@ -1,0 +1,1 @@
+export const getVolume = ({ id, volume }) => (dispatch, getState) => getState().pages[id][volume].records;

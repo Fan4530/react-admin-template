@@ -4,7 +4,7 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
-import reducer from './reducer';
+import {rootReducer} from './reducers';
 import { AppContainer } from 'react-hot-loader';
 import Page from './Page';
 import './style/lib/animate.css';
@@ -13,7 +13,7 @@ import './style/index.less';
 
 // redux 注入操作
 const middleware = [thunk];
-const store = createStore(reducer, applyMiddleware(...middleware));
+const store = createStore(rootReducer, applyMiddleware(...middleware));
 console.log(store.getState());
 
 

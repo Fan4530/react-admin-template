@@ -1,16 +1,17 @@
 /**
  * Created by hao.cheng on 2017/4/13.
  */
-import React, { Component } from 'react';
-import { Menu, Icon, Layout, Badge, Popover } from 'antd';
+import React, {Component} from 'react';
+import {Menu, Icon, Layout, Badge, Popover} from 'antd';
 import screenfull from 'screenfull';
-import { gitOauthToken, gitOauthInfo } from '../axios';
-import { queryString } from '../utils';
+import {gitOauthToken, gitOauthInfo} from '../axios';
+import {queryString} from '../utils/index.jsx';
 import avater from '../style/imgs/b1.jpg';
 import SiderCustom from './SiderCustom';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-const { Header } = Layout;
+import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
+
+const {Header} = Layout;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -19,6 +20,7 @@ class HeaderCustom extends Component {
         user: '',
         visible: false,
     };
+
     componentDidMount() {
         const QueryString = queryString();
         // if (QueryString.hasOwnProperty('code')) {
@@ -53,6 +55,7 @@ class HeaderCustom extends Component {
             });
         }
     };
+
     screenFull = () => {
         if (screenfull.enabled) {
             screenfull.request();
@@ -73,16 +76,21 @@ class HeaderCustom extends Component {
         });
     };
     handleVisibleChange = (visible) => {
-        this.setState({ visible });
+        this.setState({visible});
     };
+
     render() {
-        const { responsive, path } = this.props;
+        const {responsive, path} = this.props;
+        // console.log("hello world")
+        // console.log(responsive);
         return (
-            <Header className="custom-theme header" >
+            <Header className="custom-theme header">
                 {
                     responsive.data.isMobile ? (
-                        <Popover content={<SiderCustom path={path} popoverHide={this.popoverHide} />} trigger="click" placement="bottomLeft" visible={this.state.visible} onVisibleChange={this.handleVisibleChange}>
-                            <Icon type="bars" className="header__trigger custom-trigger" />
+                        <Popover content={<SiderCustom path={path} popoverHide={this.popoverHide}/>} trigger="click"
+                                 placement="bottomLeft" visible={this.state.visible}
+                                 onVisibleChange={this.handleVisibleChange}>
+                            <Icon type="bars" className="header__trigger custom-trigger"/>
                         </Popover>
                     ) : (
                         <Icon
@@ -94,18 +102,19 @@ class HeaderCustom extends Component {
                 }
                 <Menu
                     mode="horizontal"
-                    style={{ lineHeight: '64px', float: 'right' }}
+                    style={{lineHeight: '64px', float: 'right'}}
                     onClick={this.menuClick}
                 >
-                    <Menu.Item key="full" onClick={this.screenFull} >
-                        <Icon type="arrows-alt" onClick={this.screenFull} />
+                    <Menu.Item key="full" onClick={this.screenFull}>
+                        <Icon type="arrows-alt" onClick={this.screenFull}/>
                     </Menu.Item>
                     <Menu.Item key="1">
                         <Badge count={25} overflowCount={10} style={{marginLeft: 10}}>
-                            <Icon type="notification" />
+                            <Icon type="notification"/>
                         </Badge>
                     </Menu.Item>
-                    <SubMenu title={<span className="avatar"><img src={avater} alt="头像" /><i className="on bottom b-white" /></span>}>
+                    <SubMenu title={<span className="avatar"><img src={avater} alt="头像"/><i
+                        className="on bottom b-white"/></span>}>
                         <MenuItemGroup title="用户中心">
                             <Menu.Item key="setting:1">你好 - {this.props.user.userName}</Menu.Item>
                             <Menu.Item key="setting:2">个人信息</Menu.Item>
@@ -123,7 +132,7 @@ class HeaderCustom extends Component {
 }
 
 const mapStateToProps = state => {
-    const { responsive = {data: {}} } = state.httpData;
+    const {responsive = {data: {}}} = state.httpData;
     return {responsive};
 };
 
