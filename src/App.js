@@ -54,7 +54,7 @@ class App extends Component {
     componentDidMount() {
         const openNotification = () => {
             notification.open({
-                message: '博主-yezihaohao',
+                message: 'Fan Zhang',
                 description: (
                     <div>
                         {receiveData()}
@@ -104,7 +104,11 @@ class App extends Component {
                     <HeaderCustom toggle={this.toggle} collapsed={this.state.collapsed} user={auth.data || {}}/>
 
                     <Content style={{margin: '0 16px', overflow: 'initial', flex: '1 1 0'}}>
-                        <Routes auth={auth}/>
+
+                        <Routes auth={auth}
+                                allProfiles={this.props.data.allProfiles}
+                        />
+
                     </Content>
 
                     <Footer style={{textAlign: 'center'}}>

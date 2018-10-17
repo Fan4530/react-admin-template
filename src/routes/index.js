@@ -6,7 +6,7 @@ import {Redirect, Route, Switch} from 'react-router-dom';
 import AllComponents from '../components';
 import routesConfig from './config';
 
-export default class CRouter extends Component {
+export default class xCRouter extends Component {
     requireAuth = (permission, component) => {
         const {auth} = this.props;
         const {permissions} = auth.data;
@@ -23,35 +23,57 @@ export default class CRouter extends Component {
         return permission ? this.requireAuth(permission, component) : component;
     };
 
-    route = r => {
+    route = (r, data) => {
         const Component = AllComponents[r.component];
+        const route = '/' + r.key;
+        console.log("check data here")
+        console.log(data)
         return (
             <Route
-                key={r.route || r.key}
+
+                key={r.key}
                 exact
-                path={r.route || r.key}
+                path={r.key}
                 render={props => r.login ?
-                    <Component {...props} />
-                    : this.requireLogin(<Component {...props} />, r.auth)}
+                    // TODO:
+                    // why this if else??
+                    <Component {...props}
+                               data={data}/>
+                    : this.requireLogin(<Component {...props} data={data}/>, r.auth)}
             />
         )
     }
 
     render() {
+        console.log("check route data")
+        console.log(this.props.allProfiles)
+        const dataMapping = {
+            userprofiles: this.props.allProfiles,
+        }
         return (
             <Switch>
                 {
                     Object.keys(routesConfig).map(key =>
-                        // key = menu, other
-                        // each r is one `title object`, for example, `dashboard object`
-                        // r.component is the name of `title object`
+                        // key = menu layer, for example: menu
+                        // r:  the layer beside the menu
+                        // for example: dashboard, user profiles
+
                         routesConfig[key].map(r => {
-                            return r.component ? this.route(r) : r.subs.map(r => this.route(r));
+                            // if has sub routes, then mapping to sub routes
+                            // else route to current rout
+
+                            // TODO: use lodash get
+                            // const data = _get(dataMapping, r.key, null).__wrapped__;
+                            const data = dataMapping[r.idx]
+                            console.log("the key is")
+                            console.log(r.key)
+                            console.log(data)
+                            return r.component ? this.route(r, data) : r.subs.map((r, data) => this.route(r, data));
                         })
                     )
                 }
 
-                <Route render={() => <Redirect to="/404"/>}/>
+                <Route render={() => <Redirect to="/app/dashboard"/>}/>
             </Switch>
         )
     }
