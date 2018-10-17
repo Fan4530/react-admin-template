@@ -8,9 +8,7 @@ import {bindActionCreators} from 'redux';
 import Routes from './routes';
 import {loadProfile} from "./actions/actions-profile";
 import {signIn} from "./actions/auth/signIn";
-import ThemePicker from "./components/widget/ThemePicker";
 import {loadAllProfiles} from "./actions/actions-all_profiles";
-import {allProfiles} from "./reducers/reducer-all_profiles";
 
 const {Content, Footer} = Layout;
 
@@ -20,6 +18,8 @@ class App extends Component {
     };
 
     componentWillMount() {
+        console.log("get the sstate")
+        console.log(this.props.store)
         console.log("show me the responsive");
 
         console.log(this.props);
@@ -27,17 +27,14 @@ class App extends Component {
             login: "anonymous",
             password: "q=3?testT"
         });
-        console.log("check auth")
-        console.log(this.props.data);
         // if(this.props.data.loggedIn) {
-            console.log("I am in")
-            this.props.actions.loadProfile();
         this.props.actions.loadAllProfiles();
+        console.log("I am in")
+
         console.log(this.props);
 
 
         // }
-
 
 
         const {receiveData} = this.props;
@@ -94,9 +91,13 @@ class App extends Component {
     };
 
     render() {
+        console.log("I am in")
+
+        console.log(this.props);
         const {auth, responsive} = this.props;
         return (
             <Layout>
+
                 {!responsive.data.isMobile && <SiderCustom collapsed={this.state.collapsed}/>}
                 {/*TODO with layout*/}
                 <Layout style={{flexDirection: 'column'}}>

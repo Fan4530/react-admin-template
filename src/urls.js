@@ -107,3 +107,4 @@ export const LOAD_DEFAULT_RETAILER_AND_CURATOR_URL = `${DOMAIN}${API_PREFIX}/hom
 
 export const SAVE_NOTIFICATION_URL = `${DOMAIN}${API_PREFIX}/notification/save`;
 
+export const LOAD_ALL_PROFILES_URL = `${DOMAIN}${API_PREFIX}/userprofile/all`;

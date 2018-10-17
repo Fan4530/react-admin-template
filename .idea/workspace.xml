@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21fbc1dd-0d6a-4880-9b74-956b3753adb7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/actions-all_profiles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/reducer-all_profiles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/urls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/actions-all_profiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actions-all_profiles.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,17 +17,41 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+            <state relative-caret-position="253">
+              <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reducer-auth.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/reducer-auth.js">
+      <file leaf-file-name="reducer-all_profiles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/reducer-all_profiles.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="373">
+              <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#145#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lib.es2015.core.d.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es2015.core.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="310" column="4" selection-start-line="310" selection-start-column="4" selection-end-line="310" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actions-all_profiles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/actions-all_profiles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -39,19 +59,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reducer-httpData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/reducer-httpData.js">
+      <file leaf-file-name="reducer-all_dots.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/reducer-all_dots.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="-113">
+              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actions-all_dots.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/actions-all_dots.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-193">
+              <caret line="24" column="52" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actions-dot.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/actions-dot.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2609" />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
+            <state relative-caret-position="134">
               <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -60,42 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="type.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/type.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reducer-all_profiles.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/reducer-all_profiles.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="actions-all_profiles.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/actions-all_profiles.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="urls.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/urls.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
+            <state relative-caret-position="-1584">
               <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
             </state>
           </provider>
@@ -104,7 +111,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
+            <state relative-caret-position="199">
               <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -124,8 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FixedTable</find>
-      <find>table</find>
       <find>mapStateToPorps</find>
       <find>profile</find>
       <find>store</find>
@@ -154,6 +159,8 @@
       <find>login-form</find>
       <find>注册</find>
       <find>signin</find>
+      <find>LOAD_ALL_PROFILES_SUCCESS</find>
+      <find>LOAD_ALL_PROFILES_URL</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/action</dir>
@@ -194,8 +201,10 @@
         <option value="$PROJECT_DIR$/src/components/index.js" />
         <option value="$PROJECT_DIR$/src/style/login.less" />
         <option value="$PROJECT_DIR$/src/components/pages/Login.jsx" />
-        <option value="$PROJECT_DIR$/src/urls.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/urls.js" />
+        <option value="$PROJECT_DIR$/src/reducers/reducer-all_profiles.js" />
+        <option value="$PROJECT_DIR$/src/actions/actions-all_profiles.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
@@ -217,8 +226,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="380" />
-    <option name="y" value="100" />
+    <option name="x" value="80" />
+    <option name="y" value="173" />
     <option name="width" value="1238" />
     <option name="height" value="854" />
   </component>
@@ -282,7 +291,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="App&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/App.js&#10;reducer/index&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducers/index.js&#10;Header&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/components/HeaderCustom.jsx&#10;HeaderCustom.j&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/components/HeaderCustom.jsx&#10;reducer-all_dots.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducers/reducer-all_dots.js&#10;./src/reducers/reducer-profiles.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducers/reducer-profiles.js&#10;actions-utils.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/actions/actions-utils.js&#10;actions-relevant_dots.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/actions/actions-relevant_dots.js&#10;reducer-style_shops&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducers/reducer-style_shops.js&#10;./src/actions/actions-profiles.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/actions/actions-profiles.js&#10;./src/actions/actions-profiles.js &#9;null&#9;null&#10;saveba&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/actions/profiles/info/saveBackground.js&#10;./src/reducer/reducer-dot_storage.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducer/reducer-dot_storage.js&#10;reducer-no&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducer/reducer-notifications.js&#10;notifications&#9;null&#9;null&#10;original&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducer/reducer-original.js&#10;origin&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducer/reducer-original.js" />
+    <property name="SearchEverywhereHistoryKey" value="actions&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/actions/actions-all_profiles.js&#10;actions-all&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/actions/actions-all_profiles.js&#10;App&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/App.js&#10;reducer/index&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducers/index.js&#10;Header&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/components/HeaderCustom.jsx&#10;HeaderCustom.j&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/components/HeaderCustom.jsx&#10;reducer-all_dots.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducers/reducer-all_dots.js&#10;./src/reducers/reducer-profiles.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducers/reducer-profiles.js&#10;actions-utils.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/actions/actions-utils.js&#10;actions-relevant_dots.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/actions/actions-relevant_dots.js&#10;reducer-style_shops&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducers/reducer-style_shops.js&#10;./src/actions/actions-profiles.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/actions/actions-profiles.js&#10;./src/actions/actions-profiles.js &#9;null&#9;null&#10;saveba&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/actions/profiles/info/saveBackground.js&#10;./src/reducer/reducer-dot_storage.js&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducer/reducer-dot_storage.js&#10;reducer-no&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducer/reducer-notifications.js&#10;notifications&#9;null&#9;null&#10;original&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducer/reducer-original.js&#10;origin&#9;FILE&#9;file:///Users/zhangfan/projects/stuffdot/react-admin/src/reducer/reducer-original.js" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -294,16 +303,16 @@
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/action" />
+      <recent name="$PROJECT_DIR$/src/actions" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/actions" />
       <recent name="$PROJECT_DIR$/src/reducers" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/action" />
       <recent name="$PROJECT_DIR$/src/reducer" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/action" />
-      <recent name="$PROJECT_DIR$/src/actions" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -319,7 +328,7 @@
     </option>
   </component>
   <component name="ToolWindowManager">
-    <frame x="380" y="100" width="1238" height="854" extended-state="0" />
+    <frame x="80" y="173" width="1238" height="854" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -370,33 +379,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/urls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/type.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -418,13 +400,6 @@
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/reducer-all_dots.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -456,9 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/tables/EditableTable.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/tables/FixedTable.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -472,15 +444,6 @@
           <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SiderCustom.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Page.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/BreadcrumbCustom.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/redux/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -514,16 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -679,37 +632,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/reducer-price_tracking_dots.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#46#72#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/reducer-auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/reducer-httpData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/actions-deal_dots.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="7" lean-forward="true" selection-end-line="67" selection-end-column="2" />
+          <folding>
+            <element signature="e#256#278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/type.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/actions-dot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2609" />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es2015.core.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="310" column="4" selection-start-line="310" selection-start-column="4" selection-end-line="310" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/urls.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="-1584">
           <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/actions-all_profiles.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/reducer-all_profiles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        <state relative-caret-position="199">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
+        <state relative-caret-position="134">
           <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
@@ -717,10 +713,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/reducer-all_dots.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-113">
+          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/actions-all_dots.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/reducer-all_profiles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/actions-all_profiles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+        <state relative-caret-position="253">
+          <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

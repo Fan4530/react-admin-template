@@ -49,11 +49,13 @@ export const loadAllProfiles = () => (dispatch, getState) => {
                 json.ServiceResponse.responseCode === 'SUCCESS') {
                 let payload = { //  define yourself
                     data: {
-                        profiles: json.ServiceResponse.responseData[0].profiles.responseData,
+                        profiles: json.ServiceResponse.responseData,
                         // relatedUsers: json.ServiceResponse.responseData[1].relatedUsers.responseData[0]
                     },
                     nextPageNumber: pageNumber
                 };
+                console.log("show me the playload")
+                console.log(payload)
                 dispatch(loadAllProfilesSuccess(payload));
                 // let ids = [];
                 // payload.data.profiles.map(profile => {
@@ -67,6 +69,14 @@ export const loadAllProfiles = () => (dispatch, getState) => {
         })
         .catch(error => {
             console.log(error);
+            console.log("fail catch error")
             dispatch(loadAllProfilesFailure());
         });
 };
+
+// location /wsapp/ {
+//     proxy_pass http://wsbackend;
+//     proxy_http_version 1.1;
+//     proxy_set_header Upgrade $http_upgrade;
+//     proxy_set_header Connection "upgrade";
+// }
