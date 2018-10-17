@@ -6,7 +6,6 @@ import {Button, Checkbox, Form, Icon, Input} from 'antd';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {fetchData, receiveData} from '@/actions';
-import {loadProfile} from "../../actions/actions-profile";
 
 const FormItem = Form.Item;
 
@@ -102,7 +101,6 @@ const mapStateToPorps = state => {
 const mapDispatchToProps = dispatch => ({
     fetchData: bindActionCreators(fetchData, dispatch),
     receiveData: bindActionCreators(receiveData, dispatch),
-    loadProfile: bindActionCreators(loadProfile, dispatch)
 });
 
 

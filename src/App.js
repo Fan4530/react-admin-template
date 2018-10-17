@@ -6,7 +6,6 @@ import {receiveData} from './actions';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import Routes from './routes';
-import {loadProfile} from "./actions/actions-profile";
 import {signIn} from "./actions/auth/signIn";
 import {loadAllProfiles} from "./actions/actions-all_profiles";
 
@@ -91,7 +90,7 @@ class App extends Component {
     };
 
     render() {
-        console.log("I am in")
+        console.log("I am in here")
 
         console.log(this.props);
         const {auth, responsive} = this.props;
@@ -135,7 +134,6 @@ const mapStateToProps = state => {
         auth,
         responsive,
         data: {
-            profiles: state.profiles,
             loggedIn: state.auth.loggedIn,
             allProfiles: state.allProfiles,
         }
@@ -145,7 +143,6 @@ const mapDispatchToProps = dispatch => ({
     receiveData: bindActionCreators(receiveData, dispatch),
 
     actions: {
-        loadProfile: bindActionCreators(loadProfile, dispatch),
         signIn: bindActionCreators(signIn, dispatch),
         loadAllProfiles: bindActionCreators(loadAllProfiles, dispatch)
     }
