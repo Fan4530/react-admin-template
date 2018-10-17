@@ -1,4 +1,4 @@
-export const STUFFDOT_WEBSITE = 'http://localhost:8080';
+export const STUFFDOT_WEBSITE = '';
 export const API_PREFIX = '/api';
 
 export const DIRECT_IP = '35.185.6.32';

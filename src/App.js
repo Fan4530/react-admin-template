@@ -9,6 +9,8 @@ import Routes from './routes';
 import {loadProfile} from "./actions/actions-profile";
 import {signIn} from "./actions/auth/signIn";
 import ThemePicker from "./components/widget/ThemePicker";
+import {loadAllProfiles} from "./actions/actions-all_profiles";
+import {allProfiles} from "./reducers/reducer-all_profiles";
 
 const {Content, Footer} = Layout;
 
@@ -27,10 +29,14 @@ class App extends Component {
         });
         console.log("check auth")
         console.log(this.props.data);
-        if(this.props.data.loggedIn) {
+        // if(this.props.data.loggedIn) {
             console.log("I am in")
             this.props.actions.loadProfile();
-        }
+        this.props.actions.loadAllProfiles();
+        console.log(this.props);
+
+
+        // }
 
 
 
@@ -130,6 +136,7 @@ const mapStateToProps = state => {
         data: {
             profiles: state.profiles,
             loggedIn: state.auth.loggedIn,
+            allProfiles: state.allProfiles,
         }
     }
 };
@@ -139,6 +146,7 @@ const mapDispatchToProps = dispatch => ({
     actions: {
         loadProfile: bindActionCreators(loadProfile, dispatch),
         signIn: bindActionCreators(signIn, dispatch),
+        loadAllProfiles: bindActionCreators(loadAllProfiles, dispatch)
     }
 
 });
