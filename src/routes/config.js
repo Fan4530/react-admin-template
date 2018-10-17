@@ -1,8 +1,8 @@
 export default {
     menus: [ // 菜单相关路由
-        { key: '/app/dashboard/index', title: 'Home Page', icon: 'mobile', component: 'Dashboard' },
+        { key: '/app', title: 'Dashboard', icon: 'mobile', component: 'Dashboard' },
         //TODO: create a new component for each tables
-        { key: '/app/stuffdot1', title: 'stuffdot1', icon: 'table', component: 'SortTable' },
+        { key: '/app/userprofiles', title: 'User Profiles', icon: 'table', component: 'UserProfiles' },
         { key: '/app/stuffdot2', title: 'stuffdot2', icon: 'table', component: 'SelectTable' },
         { key: '/app/stuffdot3', title: 'stuffdot3', icon: 'table', component: 'BasicTable' },
 
