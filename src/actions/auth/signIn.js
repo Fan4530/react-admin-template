@@ -1,6 +1,6 @@
-import {LOGIN_USER_URL} from '../../urls.js';
-import {checkResponse, getCookie} from '../../utils.js';
-import {AUTH_TOKEN} from '../../constants.js';
+import {LOGIN_USER_URL} from '../../utils/urls.js';
+import {checkResponse, getCookie} from '../../utils/utils.js';
+import {AUTH_TOKEN} from '../../utils/constants.js';
 import 'whatwg-fetch';
 
 export const SIGN_IN_REQUEST = 'SIGN_IN_REQUEST';

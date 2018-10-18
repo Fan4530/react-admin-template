@@ -31,20 +31,6 @@ export const allProfiles = (state = initialState, action) => {
                 }
             )
         }
-        //     [
-        //     ...state,
-        //     {
-        //         isLoading: false,
-        //         data: action.payload.data.profiles,
-        //     }
-        // ]
-        // state.isLoading = false;
-        // state.isErrored = false;
-        // let pageSize = ALL_DOTS_PAGE_SIZE;
-        // let start = pageSize * (action.payload.nextPageNumber);
-        // state.data.splice(start, pageSize, ...action.payload.data.dots.slice(0, pageSize));
-        // if (action.payload.nextPageNumber >= state.nextPageNumber) state.nextPageNumber++;
-        // return state;
 
         case LOAD_ALL_PROFILES_FAILURE:
             return Object.assign({}, state, {
@@ -52,13 +38,7 @@ export const allProfiles = (state = initialState, action) => {
                     isErrored: true,
                 }
             );
-        // return [
-        //     ...state,
-        //     {
-        //         isLoading: false,
-        //         isErrored: true,
-        //     }
-        // ]
+
     }
     return state;
 };

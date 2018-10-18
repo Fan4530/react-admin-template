@@ -14,7 +14,7 @@ import { SIGN_OUT_SUCCESS } from '../actions/auth/signOut.js';
 
 import { FILLED_PROFILE_INFO } from '../actions/auth/filledProfileInfo.js';
 
-import { FOR_LOCALHOST } from '../constants.js';
+import { FOR_LOCALHOST } from '../utils/constants.js';
 
 import { SOMETHING_WRONG_HAPPENED } from '../actions/auth/somethingWrongHappened.js';
 

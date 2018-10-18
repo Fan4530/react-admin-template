@@ -9,16 +9,16 @@ export default {
         { idx: 'allCommissions' , key: '/app/commissions', title: 'User Commissions', icon: 'table', component: 'UserCommissions' },
         // make sure the idx is the same as the adminData type!
 
-        // if you want to using the togging menus, leave the component with blank, and define the subs
+        // if you want to use the togging menus, leave the component with blank, and define the subs
         // for example:
-        {
-            idx: 'table', key: '/app/table', title: 'Template', icon: 'table',
-            subs: [
-                { idx: 'basicTable', key: '/app/table/basicTable', title: 'Basic Table', component: 'BasicTable'},
-                { idx: 'advancedTable', key: '/app/table/advancedTable', title: 'Advanced Table', component: 'AdvancedTable'},
-                // { key: '/app/table/asynchronousTable', title: '异步表格', component: 'AsynchronousTable'},
-            ],
-        },
+        // {
+        //     idx: 'table', key: '/app/table', title: 'Template', icon: 'table',
+        //     subs: [
+        //         { idx: 'basicTable', key: '/app/table/basicTable', title: 'Basic Table', component: 'BasicTable'},
+        //         { idx: 'advancedTable', key: '/app/table/advancedTable', title: 'Advanced Table', component: 'AdvancedTable'},
+        //         // { key: '/app/table/asynchronousTable', title: '异步表格', component: 'AsynchronousTable'},
+        //     ],
+        // },
 
     ],
     others: []

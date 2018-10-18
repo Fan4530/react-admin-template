@@ -1,5 +1,5 @@
 import 'whatwg-fetch';
-import {LOAD_ALL_CASHOURT_URL} from "../urls";
+import {LOAD_ALL_CASHOURT_URL} from "../utils/urls";
 
 export const LOAD_ALL_CASHOUTS_REQUEST = 'LOAD_ALL_CASHOUTS_REQUEST';
 export const LOAD_ALL_CASHOUTS_SUCCESS = 'LOAD_ALL_CASHOUTS_SUCCESS';

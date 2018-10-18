@@ -1,7 +1,7 @@
-import { SEARCH_URL } from '../../urls.js';
-import { SEARCH_PAGE_SIZE } from '../../constants.js';
-import { checkResponse, checkResponseJson, getResponseData, getNextPage } from '../../utils.js';
-import { SEARCH_PAGINATION_ID, SEARCH_DROPDOWN_PAGINATION_ID } from '../../constants.js';
+import { SEARCH_URL } from '../../utils/urls.js';
+import { SEARCH_PAGE_SIZE } from '../../utils/constants.js';
+import { checkResponse, checkResponseJson, getResponseData, getNextPage } from '../../utils/utils.js';
+import { SEARCH_PAGINATION_ID, SEARCH_DROPDOWN_PAGINATION_ID } from '../../utils/constants.js';
 import { loadPartialProfiles } from '../profiles/loadPartialProfiles.js';
 import { addPage } from '../pages/addPage.js';
 import { pushDots } from '../dotStorage/pushDots.js';
@@ -40,7 +40,7 @@ export const getSearchResultPageSuccess = payload => ({
 export const findBySubstring = data => (dispatch, getState) => {
     console.log('FIND BY SUBSTRING');
     const { categories, substring, id, forTab = 'all', pageSize, signal } = data;
-    
+
     dispatch(findBySubstringRequest(
         {
             ...data

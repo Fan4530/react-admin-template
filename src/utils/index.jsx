@@ -1,5 +1,5 @@
 
-// 获取url的参数
+// get the url parameters
 export const queryString = () => {
     let _queryString = {};
     const _query = window.location.search.substr(1);

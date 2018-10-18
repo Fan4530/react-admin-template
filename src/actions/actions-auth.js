@@ -1,4 +1,4 @@
-import { SEND_INVITE_URL } from '../urls.js';
+import { SEND_INVITE_URL } from '../utils/urls.js';
 import 'whatwg-fetch';
 
 export const SEND_INVITE_REQUEST = 'SEND_INVITE_REQUEST';

@@ -1,11 +1,11 @@
-import { getCookie, clearCache } from '../../utils.js';
+import { getCookie, clearCache } from '../../utils/utils.js';
 import { signOut } from './signOut.js';
-import { AUTH_TOKEN } from '../../constants.js';
-import { checkResponse, getResponseData, checkResponseJson } from '../../utils.js';
+import { AUTH_TOKEN } from '../../utils/constants.js';
+import { checkResponse, getResponseData, checkResponseJson } from '../../utils/utils.js';
 import 'whatwg-fetch';
-import { CHECK_AUTH_URL } from '../../urls.js';
+import { CHECK_AUTH_URL } from '../../utils/urls.js';
 
-import { FOR_LOCALHOST } from '../../constants.js';
+import { FOR_LOCALHOST } from '../../utils/constants.js';
 
 export const CHECK_AUTH_REQUEST = 'CHECK_AUTH_REQUEST';
 export const CHECK_AUTH_SUCCESS = 'CHECK_AUTH_SUCCESS';
@@ -57,10 +57,10 @@ export const checkAuth = () => (dispatch, getState) => {
         .then(response => {
          ///   console.log('CHECK AUTH json', response);
             if (checkResponseJson(response)) {
-           
+
                 dispatch(checkAuthSuccess({ token }));
             } else {
-            
+
                 if (!FOR_LOCALHOST) {
                     //dispatch(signOut());
                     clearCache();

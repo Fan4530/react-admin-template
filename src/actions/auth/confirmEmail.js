@@ -1,4 +1,4 @@
-import { CONFIRM_EMAIL_URL } from '../../urls.js';
+import { CONFIRM_EMAIL_URL } from '../../utils/urls.js';
 import 'whatwg-fetch';
 
 export const CONFIRM_EMAIL_REQUEST = 'CONFIRM_EMAIL_REQUEST';

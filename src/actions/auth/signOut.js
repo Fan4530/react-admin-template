@@ -1,9 +1,9 @@
-import { LOGOUT_USER_URL } from '../../urls.js';
+import { LOGOUT_USER_URL } from '../../utils/urls.js';
 import { checkAuth } from './checkAuth.js';
-import { checkResponse } from '../../utils.js';
-import { getCookie, eraseCookie } from '../../utils.js';
+import { checkResponse } from '../../utils/utils.js';
+import { getCookie, eraseCookie } from '../../utils/utils.js';
 import 'whatwg-fetch';
-import {AUTH_TOKEN, TOKEN_NAME} from "../../constants";
+import {AUTH_TOKEN, TOKEN_NAME} from "../../utils/constants";
 
 export const SIGN_OUT_REQUEST = 'SIGN_OUT_REQUEST';
 export const SIGN_OUT_SUCCESS = 'SIGN_OUT_SUCCESS';

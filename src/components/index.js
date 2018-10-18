@@ -1,6 +1,5 @@
 /**
- * 路由组件出口文件
- * yezi 2018年6月24日
+ * This is file is the index for all of the current components.
  */
 import Loadable from 'react-loadable';
 import Loading from './widget/Loading';
@@ -31,7 +30,7 @@ import SelectTable from "./tables/SelectTable";
 import UserProfiles from "./user-profiles/user-profiles";
 import UserCommissions from "./user-commissions/user-commissions";
 
-const WysiwygBundle = Loadable({ // 按需加载富文本配置
+const WysiwygBundle = Loadable({
     loader: () => import('./ui/Wysiwyg'),
     loading: Loading,
 });

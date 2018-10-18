@@ -1,5 +1,5 @@
 import 'whatwg-fetch';
-import {LOAD_ALL_COMMISSIONS_URL} from "../urls";
+import {LOAD_ALL_COMMISSIONS_URL} from "../utils/urls";
 
 export const LOAD_ALL_COMMISSIONS_REQUEST = 'LOAD_ALL_COMMISSIONS_REQUEST';
 export const LOAD_ALL_COMMISSIONS_SUCCESS = 'LOAD_ALL_COMMISSIONS_SUCCESS';
