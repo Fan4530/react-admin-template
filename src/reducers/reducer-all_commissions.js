@@ -49,7 +49,7 @@ export const allCommissions = (state = initialState, action) => {
             //     }
             // )
 
-            // TODO: this is wrong, but why returnning a state cannot change state
+            // TODO: this is wrong, but why returning a state cannot change state
             state.data = action.payload.data.allCommissions;
             return state;
 

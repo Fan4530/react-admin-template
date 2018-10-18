@@ -1,6 +1,4 @@
-/**
- * Created by hao.cheng on 2017/4/13.
- */
+
 import React, { Component } from 'react';
 import { Layout } from 'antd';
 import { withRouter } from 'react-router-dom';
@@ -10,7 +8,7 @@ import SiderMenu from './SiderMenu';
 const { Sider } = Layout;
 
 class SiderCustom extends Component {
-    static getDerivedStateFromProps (props, state) { 
+    static getDerivedStateFromProps (props, state) {
         if (props.collapsed !== state.collapsed) {
             const state1 = SiderCustom.setMenuOpen(props);
             const state2 = SiderCustom.onCollapse(props.collapsed);

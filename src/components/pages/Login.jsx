@@ -1,6 +1,4 @@
-/**
- * Created by hao.cheng on 2017/4/16.
- */
+
 import React from 'react';
 import {Button, Checkbox, Form, Icon, Input} from 'antd';
 import {connect} from 'react-redux';
