@@ -53,7 +53,7 @@ class App extends Component {
         // fetchData({funcName: 'admin', stateName: 'auth'});
         this.getClientWidth();
         window.onresize = () => {
-            console.log('屏幕变化了');
+            console.log('The screen changed');
             this.getClientWidth();
         }
     }
@@ -66,12 +66,12 @@ class App extends Component {
                     <div>
                         {receiveData()}
                         <p>
-                            GitHub地址： <a href="https://github.com/yezihaohao" target="_blank"
-                                         rel="noopener noreferrer">https://github.com/yezihaohao</a>
+                            {/*GitHub地址： <a href="https://github.com/yezihaohao" target="_blank"*/}
+                                         {/*rel="noopener noreferrer">https://github.com/yezihaohao</a>*/}
                         </p>
                         <p>
-                            博客地址： <a href="https://yezihaohao.github.io/" target="_blank"
-                                     rel="noopener noreferrer">https://yezihaohao.github.io/</a>
+                            {/*博客地址： <a href="https://yezihaohao.github.io/" target="_blank"*/}
+                                     {/*rel="noopener noreferrer">https://yezihaohao.github.io/</a>*/}
                         </p>
                     </div>
                 ),

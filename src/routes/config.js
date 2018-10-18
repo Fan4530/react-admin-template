@@ -1,10 +1,13 @@
+import UserCommissions from "../components/user-commissions/user-commissions";
+
 export default {
     menus: [ // 菜单相关路由
         { idx: 'index', key: '/app/dashboard', title: 'Dashboard', icon: 'mobile', component: 'Dashboard' },
         //TODO: create a new component for each tables
         { idx: 'allUserProfiles', key: '/app/userprofiles', title: 'User Profiles', icon: 'table', component: 'UserProfiles' },
         { idx: 'allCashouts',  key: '/app/cashouts', title: 'Cashout Request', icon: 'table', component: 'Cashouts' },
-        { idx: 'allComissions' , key: '/app/commissions', title: 'User Commissions', icon: 'table', component: 'Comissions' },
+        { idx: 'allCommissions' , key: '/app/commissions', title: 'User Commissions', icon: 'table', component: 'UserCommissions' },
+        // make sure the idx is the same as the adminData type!
 
         // if you want to using the togging menus, leave the component with blank, and define the subs
         // for example:
