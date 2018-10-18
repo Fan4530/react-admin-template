@@ -12,6 +12,9 @@ class UserProfiles extends React.Component {
         console.log(this.props)
         console.log(this.props.data)
         const preData = this.props.data.data;
+        if(!preData) {
+            return null
+        }
         const data = preData.map((r, i) => {
 
             const registrationDate = moment(r.createdDate).format("YYYY-MM-DD HH:mm")

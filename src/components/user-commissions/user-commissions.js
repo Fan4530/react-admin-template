@@ -4,7 +4,7 @@ import SearchTable from "./search-table";
 import moment from "moment";
 
 
-class UserProfiles extends React.Component {
+class UserCommissions extends React.Component {
 
 
     render() {
