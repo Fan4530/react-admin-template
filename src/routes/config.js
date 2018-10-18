@@ -4,7 +4,7 @@ export default {
         //TODO: create a new component for each tables
         { idx: 'allUserProfiles', key: '/app/userprofiles', title: 'User Profiles', icon: 'table', component: 'UserProfiles' },
         { idx: 'allCashouts',  key: '/app/cashouts', title: 'Cashout Request', icon: 'table', component: 'Cashouts' },
-        { idx: 'stuffdot3' , key: '/app/stuffdot3', title: 'stuffdot3', icon: 'table', component: 'BasicTable' },
+        { idx: 'allComissions' , key: '/app/commissions', title: 'User Commissions', icon: 'table', component: 'Comissions' },
 
         // if you want to using the togging menus, leave the component with blank, and define the subs
         // for example:

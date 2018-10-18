@@ -1,6 +1,4 @@
-/**
- * Created by 叶子 on 2017/8/13.
- */
+
 import React, {Component} from 'react';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import AllComponents from '../components';

@@ -28,7 +28,7 @@ export const loadAllProfiles = () => (dispatch, getState) => {
     let pageNumber = 1// TODO
     let body = JSON.stringify({
         pageNumber,
-        pageSize: 30 // ALL_DOTS_PAGE_SIZE = 30
+        pageSize: 100 // ALL_DOTS_PAGE_SIZE = 30
         // TODO
     });
 
