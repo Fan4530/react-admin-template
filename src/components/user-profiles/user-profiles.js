@@ -29,8 +29,8 @@ class UserProfiles extends React.Component {
                 email: r.email,
                 emailCNF: r.emailConfirmed ? 'true' : 'false',
                 type: r.type,
+                createdBy: r.createdBy,
                 registrationDate,
-
             }
         })
         console.log("what is the data looks like")
