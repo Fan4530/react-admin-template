@@ -2,7 +2,7 @@ export default {
     menus: [ // 菜单相关路由
         { idx: 'index', key: '/app/dashboard', title: 'Dashboard', icon: 'mobile', component: 'Dashboard' },
         //TODO: create a new component for each tables
-        { idx: 'allUserprofiles', key: '/app/userprofiles', title: 'User Profiles', icon: 'table', component: 'UserProfiles' },
+        { idx: 'allUserProfiles', key: '/app/userprofiles', title: 'User Profiles', icon: 'table', component: 'UserProfiles' },
         { idx: 'allCashouts',  key: '/app/cashouts', title: 'Cashout Request', icon: 'table', component: 'Cashouts' },
         { idx: 'stuffdot3' , key: '/app/stuffdot3', title: 'stuffdot3', icon: 'table', component: 'BasicTable' },
 

@@ -25,8 +25,8 @@ export default class xCRouter extends Component {
 
     route = (r, data) => {
         const Component = AllComponents[r.component];
-        const route = '/' + r.key;
         console.log("check data here")
+        console.log(r)
         console.log(data)
         return (
             <Route
@@ -52,28 +52,30 @@ export default class xCRouter extends Component {
         console.log(dataMapping)
         return (
             <Switch>
-                {/*{*/}
-                    {/*Object.keys(routesConfig).map(key =>*/}
-                        {/*// key = menu layer, for example: menu*/}
-                        {/*// r:  the layer beside the menu*/}
-                        {/*// for example: dashboard, user profiles*/}
+                {
+                    Object.keys(routesConfig).map(key =>
+                        // key = menu layer, for example: menu
+                        // r:  the layer beside the menu
+                        // for example: dashboard, user profiles
 
-                        {/*routesConfig[key].map(r => {*/}
-                            {/*// if has sub routes, then mapping to sub routes*/}
-                            {/*// else route to current rout*/}
+                        routesConfig[key].map(r => {
+                            // if has sub routes, then mapping to sub routes
+                            // else route to current rout
 
-                            {/*// TODO: use lodash get*/}
-                            {/*// const data = _get(dataMapping, r.key, null).__wrapped__;*/}
-                            {/*const data = dataMapping[r.idx]*/}
-                            {/*console.log("the key is")*/}
-                            {/*console.log(r.key)*/}
-                            {/*console.log(data)*/}
-                            {/*return r.component ? this.route(r, data) : r.subs.map((r, data) => this.route(r, data));*/}
-                        {/*})*/}
-                    {/*)*/}
-                {/*}*/}
+                            // TODO: use lodash get
+                            // const data = _get(dataMapping, r.key, null).__wrapped__;
+                            const data = dataMapping[r.idx]
+                            console.log("the key is")
+                            console.log(r.idx)
+                            console.log(data)
+                            console.log(dataMapping)
+                            console.log(dataMapping['allUserProfiles'])
+                            return r.component ? this.route(r, data) : r.subs.map((r, data) => this.route(r, data));
+                        })
+                    )
+                }
 
-                {/*<Route render={() => <Redirect to="/app/dashboard"/>}/>*/}
+                <Route render={() => <Redirect to="/app/dashboard"/>}/>
             </Switch>
         )
     }

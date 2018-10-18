@@ -30,8 +30,9 @@ class App extends Component {
         });
 
         // TODO: it is better to load each function at seperate page
-        this.props.actions.loadAllCommissions();
         this.props.actions.loadAllProfiles();
+
+        this.props.actions.loadAllCommissions();
         this.props.actions.loadAllCashouts();
 
         console.log("I am in")
