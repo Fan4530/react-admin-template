@@ -43,8 +43,7 @@ export const loadAllProfiles = () => (dispatch, getState) => {
     })
         .then(response => response.json())
         .then(json => {
-            console.log("what is the json")
-            console.log(json)
+
             if (json.ServiceResponse &&
                 json.ServiceResponse.responseCode === 'SUCCESS') {
                 let payload = { //  define yourself
@@ -54,8 +53,7 @@ export const loadAllProfiles = () => (dispatch, getState) => {
                     },
                     nextPageNumber: pageNumber
                 };
-                console.log("show me the playload")
-                console.log(payload)
+
                 dispatch(loadAllProfilesSuccess(payload));
                 // let ids = [];
                 // payload.data.profiles.map(profile => {
@@ -68,8 +66,6 @@ export const loadAllProfiles = () => (dispatch, getState) => {
             }
         })
         .catch(error => {
-            console.log(error);
-            console.log("fail catch error")
             dispatch(loadAllProfilesFailure());
         });
 };

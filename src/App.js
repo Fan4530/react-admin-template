@@ -8,6 +8,7 @@ import {bindActionCreators} from 'redux';
 import Routes from './routes';
 import {signIn} from "./actions/auth/signIn";
 import {loadAllProfiles} from "./actions/actions-all_profiles";
+import {loadAllCashouts} from "./actions/actions-all_cashouts";
 
 const {Content, Footer} = Layout;
 
@@ -26,8 +27,11 @@ class App extends Component {
             login: "anonymous",
             password: "q=3?testT"
         });
-        // if(this.props.data.loggedIn) {
+
+        // TODO: it is better to load each function at seperate page
         this.props.actions.loadAllProfiles();
+        this.props.actions.loadAllCashouts();
+
         console.log("I am in")
 
         console.log(this.props);
@@ -106,7 +110,7 @@ class App extends Component {
                     <Content style={{margin: '0 16px', overflow: 'initial', flex: '1 1 0'}}>
 
                         <Routes auth={auth}
-                                allProfiles={this.props.data.allProfiles}
+                                adminData={this.props.adminData}
                         />
 
                     </Content>
@@ -137,9 +141,10 @@ const mapStateToProps = state => {
     return {
         auth,
         responsive,
-        data: {
+        adminData: {
             loggedIn: state.auth.loggedIn,
-            allProfiles: state.allProfiles,
+            allUserProfiles: state.allProfiles,
+            allCashouts: state.allCashouts,
         }
     }
 };
@@ -148,7 +153,9 @@ const mapDispatchToProps = dispatch => ({
 
     actions: {
         signIn: bindActionCreators(signIn, dispatch),
-        loadAllProfiles: bindActionCreators(loadAllProfiles, dispatch)
+        loadAllProfiles: bindActionCreators(loadAllProfiles, dispatch),
+        loadAllCashouts: bindActionCreators(loadAllCashouts, dispatch)
+
     }
 
 });

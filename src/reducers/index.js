@@ -2,6 +2,7 @@ import {combineReducers} from 'redux';
 import {httpData} from "./reducer-httpData";
 import {auth, initialState as authInitialState} from './reducer-auth.js';
 import {allProfiles, initialState as allProfilesInitialState} from "./reducer-all_profiles";
+import {allCashouts, initialState as allCashoutsInitialState} from "./reducer-all_cashouts";
 
 /*
  * We combine all reducers into a single object before updated data is dispatched (sent) to store
@@ -11,13 +12,11 @@ import {allProfiles, initialState as allProfilesInitialState} from "./reducer-al
 export const initialState = {
     auth: authInitialState,
     allProfiles: allProfilesInitialState,
-
+    allCashouts: allCashoutsInitialState,
 };
 export const appReducer = combineReducers({
     allProfiles,
-
-
-
+    allCashouts,
     httpData,
     auth,
 });
