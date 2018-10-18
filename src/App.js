@@ -9,6 +9,7 @@ import Routes from './routes';
 import {signIn} from "./actions/auth/signIn";
 import {loadAllProfiles} from "./actions/actions-all_profiles";
 import {loadAllCashouts} from "./actions/actions-all_cashouts";
+import {loadAllCommissions} from "./actions/actions-all_commissions";
 
 const {Content, Footer} = Layout;
 
@@ -29,6 +30,7 @@ class App extends Component {
         });
 
         // TODO: it is better to load each function at seperate page
+        this.props.actions.loadAllCommissions();
         this.props.actions.loadAllProfiles();
         this.props.actions.loadAllCashouts();
 
@@ -80,7 +82,12 @@ class App extends Component {
         const isFirst = JSON.parse(localStorage.getItem('isFirst'));
         !isFirst && openNotification();
     }
-
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.adminData != this.props.adminData) {
+            console.log("to see if there is adminData")
+            console.log(nextProps.adminData)
+        }
+    }
     getClientWidth = () => { // 获取当前浏览器宽度并设置responsive管理响应式
         const {receiveData} = this.props;
         const clientWidth = window.innerWidth;
@@ -138,6 +145,11 @@ class App extends Component {
 
 const mapStateToProps = state => {
     const {auth = {data: {}}, responsive = {data: {}}} = state.httpData;
+
+    console.log("what is the all commissions data in the state")
+    console.log( state)
+
+    console.log( state.allCommissions)
     return {
         auth,
         responsive,
@@ -145,6 +157,7 @@ const mapStateToProps = state => {
             loggedIn: state.auth.loggedIn,
             allUserProfiles: state.allProfiles,
             allCashouts: state.allCashouts,
+            allCommissions: state.allCommissions,
         }
     }
 };
@@ -154,7 +167,8 @@ const mapDispatchToProps = dispatch => ({
     actions: {
         signIn: bindActionCreators(signIn, dispatch),
         loadAllProfiles: bindActionCreators(loadAllProfiles, dispatch),
-        loadAllCashouts: bindActionCreators(loadAllCashouts, dispatch)
+        loadAllCashouts: bindActionCreators(loadAllCashouts, dispatch),
+        loadAllCommissions: bindActionCreators(loadAllCommissions, dispatch)
 
     }
 

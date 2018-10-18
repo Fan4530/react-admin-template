@@ -73,7 +73,7 @@ export default class xCRouter extends Component {
                     {/*)*/}
                 {/*}*/}
 
-                <Route render={() => <Redirect to="/app/dashboard"/>}/>
+                {/*<Route render={() => <Redirect to="/app/dashboard"/>}/>*/}
             </Switch>
         )
     }

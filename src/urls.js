@@ -9,6 +9,8 @@ export const DOMAIN = '';
 
 export const LOAD_ALL_PROFILES_URL = `${DOMAIN}${API_PREFIX}/userprofile/all`;
 export const LOAD_ALL_CASHOURT_URL = `${DOMAIN}${API_PREFIX}/usercashout/all`;
+export const LOAD_ALL_COMMISSIONS_URL = `${DOMAIN}${API_PREFIX}/usercommission/all`;
+
 export const CHECK_AUTH_URL = `${DOMAIN}${API_PREFIX}/auth/checkAuth`;
 export const LOGIN_USER_URL = `${DOMAIN}${API_PREFIX}/login`;
 export const LOGOUT_USER_URL = `${DOMAIN}${API_PREFIX}/logout`;
