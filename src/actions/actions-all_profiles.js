@@ -53,8 +53,8 @@ export const loadAllProfiles = () => (dispatch, getState) => {
                     },
                     nextPageNumber: pageNumber
                 };
-                console.log("show me the action user profile")
-                console.log(payload)
+                // console.log("show me the action user profile")
+                // console.log(payload)
                 dispatch(loadAllProfilesSuccess(payload));
                 // let ids = [];
                 // payload.data.profiles.map(profile => {

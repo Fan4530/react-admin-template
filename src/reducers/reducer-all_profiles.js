@@ -6,7 +6,7 @@ import {
 
 export const initialState = {
     data: [],
-    isLoading: false,
+    isLoading: true,
     isErrored: false,
     nextPageNumber: 0
 };
@@ -14,18 +14,20 @@ export const initialState = {
 export const allProfiles = (state = initialState, action) => {
     switch (action.type) {
         case LOAD_ALL_PROFILES_REQUEST: {
-            console.log("what is the request state")
-            console.log(state)
+            // console.log("what is the request state")
+            // console.log(state)
             return Object.assign({}, state, {
                 isLoading: true,
 
             })
         }
         case LOAD_ALL_PROFILES_SUCCESS: {
-            console.log("what is the succuss state")
-            console.log(state)
-            console.log(action.payload.data.profiles)
+            // console.log("what is the succuss state")
+            // console.log(state)
+            // console.log(action.payload.data.profiles)
+
             state.data = action.payload.data.profiles;
+            state.isLoading = false;
             return state;
             // return Object.assign({}, state, {
             //         isLoading: true,

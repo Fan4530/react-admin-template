@@ -7,24 +7,24 @@ class UserCommissions extends React.Component {
 
 
     render() {
-        console.log("check data table of the commissions")
-        console.log(this.props)
-        console.log(this.props.data)
+        // console.log("check data table of the commissions")
+        // console.log(this.props)
+        // console.log(this.props.data)
         const preData = this.props.data.data;
         const data = preData.map((r, i) => {
 
             const payDate = moment(r.payDate).format("YYYY-MM-DD HH:mm")
             const transactionTime = moment(r.transactionDate).format("YYYY-MM-DD HH:mm")
 
-            console.log("time")
-            console.log(payDate)
-            console.log(r)
+            // console.log("time")
+            // console.log(payDate)
+            // console.log(r)
             return {
                 key: i,
 
-                email: 'zhan978@usc.edu',
-                name: 'fan zhang',
-                merchantName: 'fan zhang',
+                email: r.email,
+                name: r.name,
+                merchantName: r.merchantName,
                 transactionTime,
                 totalCommissionValue: r.totalCommissionValue,
                 payDate,

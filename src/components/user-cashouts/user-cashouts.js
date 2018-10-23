@@ -27,8 +27,8 @@ class UserCashouts extends React.Component {
 
             }
         })
-        console.log("what is the data looks like")
-        console.log(data)
+        // console.log("what is the data looks like")
+        // console.log(data)
 
         return (
             <div>

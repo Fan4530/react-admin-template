@@ -138,9 +138,9 @@ class SearchTable extends React.Component {
                 value: 'false',
             }],
             onFilter: (value, record) => {
-                console.log("temm me the recor")
-                console.log(value)
-                console.log(record)
+                // console.log("temm me the recor")
+                // console.log(value)
+                // console.log(record)
                 return record.emailCNF.indexOf(value) === 0
             }
         }, {

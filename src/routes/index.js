@@ -23,10 +23,10 @@ export default class xCRouter extends Component {
 
     route = (r, data) => {
         const isLoading = !data ? true : data.isLoading
-        const Component = isLoading ? AllComponents['isLanding'] : AllComponents[r.component];
-        console.log("check data here")
-        console.log(r)
-        console.log(data)
+        const Component = isLoading && r.component != 'Dashboard' ? AllComponents['isLanding'] : AllComponents[r.component];
+        // console.log("check data here")
+        // console.log(r)
+        // console.log(data)
 
         return (
             <Route
@@ -64,11 +64,11 @@ export default class xCRouter extends Component {
                             // TODO: use lodash get
                             // const data = _get(dataMapping, r.key, null).__wrapped__;
                             const data = dataMapping[r.idx]
-                            if(r.idx == 'allCashouts') {
-                                console.log("what is the data here")
-                                console.log(r)
-                                console.log(data)
-                            }
+                            // if(r.idx == 'allCashouts') {
+                            //     console.log("what is the data here")
+                            //     console.log(r)
+                            //     console.log(data)
+                            // }
 
                             return r.component ? this.route(r, data) : r.subs.map((r, data) => this.route(r, data));
                         })

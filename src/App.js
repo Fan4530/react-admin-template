@@ -147,8 +147,8 @@ class App extends Component {
 const mapStateToProps = state => {
     const {auth = {data: {}}, responsive = {data: {}}} = state.httpData;
 
-    console.log("what is the all commissions data in the state")
-    console.log( state)
+    // console.log("what is the all commissions data in the state")
+    // console.log( state)
 
     console.log( state.allCommissions)
     return {
