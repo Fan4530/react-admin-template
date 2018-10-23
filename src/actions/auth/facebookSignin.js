@@ -1,9 +1,9 @@
-import { FACEBOOK_LOGIN_USER_URL } from '../../urls.js';
-import { getCookie, clearCache } from '../../utils.js';
-import { AUTH_TOKEN } from '../../constants.js';
+import { FACEBOOK_LOGIN_USER_URL } from '../../utils/urls.js';
+import { getCookie, clearCache } from '../../utils/utils.js';
+import { AUTH_TOKEN } from '../../utils/constants.js';
 import { checkAuth } from './checkAuth.js';
 import 'whatwg-fetch';
-import { checkResponse } from '../../utils.js';
+import { checkResponse } from '../../utils/utils.js';
 
 export const FACEBOOK_SIGN_IN_REQUEST = 'FACEBOOK_SIGN_IN_REQUEST';
 export const FACEBOOK_SIGN_IN_SUCCESS = 'FACEBOOK_SIGN_IN_SUCCESS';

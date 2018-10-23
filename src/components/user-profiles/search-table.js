@@ -123,6 +123,10 @@ class SearchTable extends React.Component {
             dataIndex: 'lasttName',
             key: 'lastName',
         }, {
+            title: 'Created By',
+            dataIndex: 'createdBy',
+            key: 'createdBy',
+        }, {
             title: 'Email CNF',
             dataIndex: 'emailCNF',
             key: 'emailCNF',

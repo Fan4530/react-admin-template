@@ -5,7 +5,7 @@ import moment from "moment";
 
 
 
-class SearchTable extends React.Component {
+class CommissionTable extends React.Component {
     state = {
         filterDropdownVisibleEmail: false,
         filterDropdownVisibleUsername: false,
@@ -74,97 +74,31 @@ class SearchTable extends React.Component {
             title: 'key',
             dataIndex: 'key',
             key: 'key',
-            sorter: (a, b) =>  a - b,
-            sortOrder: sortedInfo.columnKey === 'name' && sortedInfo.order,
-        }, {
-            title: 'User Name',
-            dataIndex: 'username',
-            key: 'username',
-            filterDropdown: (
-                <div className="custom-filter-dropdown">
-                    <Input
-                        ref={ele => this.searchInput = ele}
-                        placeholder="Search username"
-                        value={this.state.searchText}
-                        onChange={this.onInputChange}
-                        onPressEnter={this.onSearchUsername}
-                    />
-                    <Button type="primary" onClick={this.onSearchUsername}>Search</Button>
-                </div>
-            ),
-            filterIcon: <Icon type="smile-o" style={{ color: this.state.filtered ? '#108ee9' : '#aaa' }} />,
-            filterDropdownVisibleUsername: this.state.filterDropdownVisibleUsername,
-            onFilterDropdownVisibleChange: visible => this.setState({ filterDropdownVisibleUsername: visible }, () => this.searchInput.focus()),
+
         }, {
             title: 'Email',
             dataIndex: 'email',
             key: 'email',
-            filterDropdown: (
-                <div className="custom-filter-dropdown">
-                    <Input
-                        ref={ele => this.searchInput = ele}
-                        placeholder="Search email"
-                        value={this.state.searchText}
-                        onChange={this.onInputChange}
-                        onPressEnter={this.onSearchEmail}
-                    />
-                    <Button type="primary" onClick={this.onSearchEmail}>Search</Button>
-                </div>
-            ),
-            filterIcon: <Icon type="smile-o" style={{ color: this.state.filtered ? '#108ee9' : '#aaa' }} />,
-            filterDropdownVisibleEmail: this.state.filterDropdownVisibleEmail,
-            onFilterDropdownVisibleChange: visible => this.setState({ filterDropdownVisibleEmail: visible }, () => this.searchInput.focus()),
+
         }, {
-            title: 'First Name',
-            dataIndex: 'firstName',
-            key: 'firstName',
+            title: 'Merchant Name',
+            dataIndex: 'merchantName',
+            key: 'merchantName',
+
         }, {
-            title: 'Last Name',
-            dataIndex: 'lasttName',
-            key: 'lastName',
+            title: 'Transaction Time',
+            dataIndex: 'transactionTime',
+            key: 'transactionTime',
         }, {
-            title: 'Email CNF',
-            dataIndex: 'emailCNF',
-            key: 'emailCNF',
-            filters: [{
-                text: 'Confirmed',
-                value: 'true',
-            }, {
-                text: 'Unconfirmed',
-                value: 'false',
-            }],
-            onFilter: (value, record) => {
-                console.log("temm me the recor")
-                console.log(value)
-                console.log(record)
-                return record.emailCNF.indexOf(value) === 0
-            }
+            title: 'Total Commission Value',
+            dataIndex: 'totalCommissionValue',
+            key: 'totalCommissionValue',
         }, {
-            title: 'type',
-            dataIndex: 'type',
-            key: 'type',
-            filters: [{
-                text: 'CUSTOMER',
-                value: 'CUSTOMER',
-            }, {
-                text: 'RETAILER',
-                value: 'RETAILER',
-            }],
-            // filters: [{
-            //     text: 'Confirmed',
-            //     value: 'true',
-            // }, {
-            //     text: 'Unconfirmed',
-            //     value: 'false',
-            // }],
-            onFilter: (value, record) => record.type.indexOf(value) === 0,
-        }, {
-            title: 'Registration Date',
-            dataIndex: 'registrationDate',
-            key: 'registrationDate',
-            sorter: (a, b) =>  moment(a).isAfter(moment(b)) ? 1 : -1,
-            sortOrder: sortedInfo.columnKey === 'registrationDate' && sortedInfo.order,
-        }, ];
+            title: 'Pay Date',
+            dataIndex: 'payDate',
+            key: 'payDate',
+
+        }];
         return (
             <div>
                 <Table columns={columns} dataSource={this.props.data} />
@@ -188,4 +122,4 @@ class SearchTable extends React.Component {
     }
 }
 
-export default SearchTable;
+export default CommissionTable;

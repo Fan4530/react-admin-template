@@ -1,5 +1,5 @@
 import 'whatwg-fetch';
-import {LOAD_ALL_PROFILES_URL} from "../urls";
+import {LOAD_ALL_PROFILES_URL} from "../utils/urls";
 
 export const LOAD_ALL_PROFILES_REQUEST = 'LOAD_ALL_PROFILES_REQUEST';
 export const LOAD_ALL_PROFILES_SUCCESS = 'LOAD_ALL_PROFILES_SUCCESS';
@@ -28,7 +28,7 @@ export const loadAllProfiles = () => (dispatch, getState) => {
     let pageNumber = 1// TODO
     let body = JSON.stringify({
         pageNumber,
-        pageSize: 30 // ALL_DOTS_PAGE_SIZE = 30
+        pageSize: 100 // ALL_DOTS_PAGE_SIZE = 30
         // TODO
     });
 

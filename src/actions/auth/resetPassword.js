@@ -1,4 +1,4 @@
-import { RESET_PASSWORD_URL } from '../../urls.js';
+import { RESET_PASSWORD_URL } from '../../utils/urls.js';
 import 'whatwg-fetch';
 
 export const RESET_PASSWORD_REQUEST = 'RESET_PASSWORD_REQUEST';

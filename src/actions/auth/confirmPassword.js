@@ -1,4 +1,4 @@
-import { CONFIRM_PASSWORD_URL } from '../../urls.js';
+import { CONFIRM_PASSWORD_URL } from '../../utils/urls.js';
 import 'whatwg-fetch';
 
 export const CONFIRM_PASSWORD_REQUEST = 'CONFIRM_PASSWORD_REQUEST';
@@ -24,7 +24,7 @@ export const confirmPassword = ({ password, passwordConfirmation, id }) => dispa
     dispatch(confirmPasswordRequest({ password, id }));
     if (password !== passwordConfirmation) {
         dispatch(confirmPasswordFailure({ password, id, message: 'Your password and confirmation password do not match.' }));
-    } else { 
+    } else {
     fetch(CONFIRM_PASSWORD_URL, {
         method: 'post',
         headers: {

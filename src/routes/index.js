@@ -1,6 +1,4 @@
-/**
- * Created by 叶子 on 2017/8/13.
- */
+
 import React, {Component} from 'react';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import AllComponents from '../components';
@@ -45,8 +43,7 @@ export default class xCRouter extends Component {
     }
 
     render() {
-        console.log("check route data")
-        console.log(this.props.allProfiles)
+
         const dataMapping = this.props.adminData
         console.log("check the data mapping")
         console.log(dataMapping)
@@ -65,11 +62,12 @@ export default class xCRouter extends Component {
                             // TODO: use lodash get
                             // const data = _get(dataMapping, r.key, null).__wrapped__;
                             const data = dataMapping[r.idx]
-                            console.log("the key is")
-                            console.log(r.idx)
-                            console.log(data)
-                            console.log(dataMapping)
-                            console.log(dataMapping['allUserProfiles'])
+                            if(r.idx == 'allCommissions') {
+                                console.log("what is the data here")
+                                console.log(r)
+                                console.log(data)
+                            }
+
                             return r.component ? this.route(r, data) : r.subs.map((r, data) => this.route(r, data));
                         })
                     )

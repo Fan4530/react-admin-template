@@ -1,6 +1,6 @@
-import { SIGN_UP_URL } from '../../urls.js';
+import { SIGN_UP_URL } from '../../utils/urls.js';
 import 'whatwg-fetch';
-import { checkResponse } from '../../utils.js';
+import { checkResponse } from '../../utils/utils.js';
 import { signIn } from './signIn.js';
 
 export const SIGN_UP_REQUEST = 'SIGN_UP_REQUEST';
@@ -45,7 +45,7 @@ export const signUp = ({ username, email, password, source }) => dispatch => {
     );
 
     dispatch(signupLoad({status:true}));
-   
+
     fetch(SIGN_UP_URL, {
         method: 'post',
         body,
