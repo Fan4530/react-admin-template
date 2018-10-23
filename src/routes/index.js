@@ -22,10 +22,12 @@ export default class xCRouter extends Component {
     };
 
     route = (r, data) => {
-        const Component = AllComponents[r.component];
+        const isLoading = !data ? true : data.isLoading
+        const Component = isLoading ? AllComponents['isLanding'] : AllComponents[r.component];
         console.log("check data here")
         console.log(r)
         console.log(data)
+
         return (
             <Route
 

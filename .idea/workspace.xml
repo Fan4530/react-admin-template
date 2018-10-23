@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21fbc1dd-0d6a-4880-9b74-956b3753adb7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/user-cashouts/search-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/user-cashouts/user-cashouts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/isLanding.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actions-all_cashouts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actions-all_cashouts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/actions-all_profiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/actions-all_profiles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/reducer-all_cashouts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reducer-all_cashouts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/reducer-all_profiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/reducer-all_profiles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,20 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reducer-all_profiles.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/reducer-all_profiles.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="119" column="30" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="30" />
+            <state relative-caret-position="287">
+              <caret line="119" column="27" lean-forward="true" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -43,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="65" column="66" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="66" />
+            <state relative-caret-position="124">
+              <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
               <folding>
                 <element signature="e#1#40#0" expanded="true" />
               </folding>
@@ -64,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="actions-all_profiles.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="actions-all_profiles.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actions/actions-all_profiles.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+            <state relative-caret-position="288">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -88,10 +73,35 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state relative-caret-position="198">
+              <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#72#110#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search-table.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/user-profiles/search-table.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-892">
+              <caret line="125" column="14" selection-end-line="195" />
+              <folding>
+                <element signature="e#1#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="isLanding.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/isLanding.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="24" />
+              <folding>
+                <element signature="e#1#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,15 +115,6 @@
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reducer-all_cashouts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/reducer-all_cashouts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -138,7 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>action</find>
       <find>user</find>
       <find>sort</find>
       <find>info</find>
@@ -167,6 +167,7 @@
       <find>created</find>
       <find>route</find>
       <find>username</find>
+      <find>landing</find>
       <find>profile</find>
     </findStrings>
     <dirStrings>
@@ -180,7 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/reducer/reducer-original.js" />
         <option value="$PROJECT_DIR$/src/reducer/reducer-notifications.js" />
         <option value="$PROJECT_DIR$/src/reducer/reducer-httpData.js" />
         <option value="$PROJECT_DIR$/src/reducer/index.js" />
@@ -225,12 +225,13 @@
         <option value="$PROJECT_DIR$/src/actions/actions-all_cashouts.js" />
         <option value="$PROJECT_DIR$/src/reducers/reducer-all_cashouts.js" />
         <option value="$PROJECT_DIR$/src/reducers/reducer-all_profiles.js" />
-        <option value="$PROJECT_DIR$/src/routes/index.js" />
-        <option value="$PROJECT_DIR$/src/components/index.js" />
         <option value="$PROJECT_DIR$/src/routes/config.js" />
         <option value="$PROJECT_DIR$/src/components/user-cashouts/user-cashouts.js" />
         <option value="$PROJECT_DIR$/src/components/user-cashouts/search-table.js" />
         <option value="$PROJECT_DIR$/src/actions/actions-all_profiles.js" />
+        <option value="$PROJECT_DIR$/src/components/isLanding.js" />
+        <option value="$PROJECT_DIR$/src/components/index.js" />
+        <option value="$PROJECT_DIR$/src/routes/index.js" />
       </list>
     </option>
   </component>
@@ -274,12 +275,6 @@
               <item name="react-admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-admin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -376,13 +371,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/tables/SortTable.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/tables/SearchTable.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -637,16 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/user-profiles/search-table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="127" column="27" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
-          <folding>
-            <element signature="e#1#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/reducer-all_commissions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -683,26 +661,6 @@
       </provider>
       <provider editor-type-id="sourcemapFileViewerProvider" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="119" column="30" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="65" column="66" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="66" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/user-profiles/user-profiles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -716,16 +674,6 @@
           <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -746,10 +694,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/actions-all_profiles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+        <state relative-caret-position="288">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/user-profiles/search-table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-892">
+          <caret line="125" column="14" selection-end-line="195" />
+          <folding>
+            <element signature="e#1#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/isLanding.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="e#1#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="119" column="27" lean-forward="true" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#72#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
           </folding>
         </state>
       </provider>

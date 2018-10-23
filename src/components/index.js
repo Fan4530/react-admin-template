@@ -30,6 +30,7 @@ import SelectTable from "./tables/SelectTable";
 import UserProfiles from "./user-profiles/user-profiles";
 import UserCommissions from "./user-commissions/user-commissions";
 import UserCashouts from "./user-cashouts/user-cashouts";
+import isLanding from "./isLanding";
 
 const WysiwygBundle = Loadable({
     loader: () => import('./ui/Wysiwyg'),
@@ -42,4 +43,5 @@ export default {
     Tabs, Banners, Drags, Dashboard, Gallery, BasicAnimations,
     ExampleAnimations, AuthBasic, RouterEnter, WysiwygBundle,
     Cssmodule, MapUi, SortTable, SelectTable, UserProfiles,UserCommissions,UserCashouts,
+    isLanding,
 }
