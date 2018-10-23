@@ -62,7 +62,7 @@ export default class xCRouter extends Component {
                             // TODO: use lodash get
                             // const data = _get(dataMapping, r.key, null).__wrapped__;
                             const data = dataMapping[r.idx]
-                            if(r.idx == 'allCommissions') {
+                            if(r.idx == 'allCashouts') {
                                 console.log("what is the data here")
                                 console.log(r)
                                 console.log(data)

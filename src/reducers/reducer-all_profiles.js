@@ -25,11 +25,13 @@ export const allProfiles = (state = initialState, action) => {
             console.log("what is the succuss state")
             console.log(state)
             console.log(action.payload.data.profiles)
-            return Object.assign({}, state, {
-                    isLoading: true,
-                    data: action.payload.data.profiles,
-                }
-            )
+            state.data = action.payload.data.profiles;
+            return state;
+            // return Object.assign({}, state, {
+            //         isLoading: true,
+            //         data: action.payload.data.profiles,
+            //     }
+            // )
         }
 
         case LOAD_ALL_PROFILES_FAILURE:

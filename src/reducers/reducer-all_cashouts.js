@@ -22,14 +22,16 @@ export const allCashouts = (state = initialState, action) => {
             })
         }
         case LOAD_ALL_CASHOUTS_SUCCESS: {
-            console.log("what is the succuss state")
+            console.log("what is the succuss state cashout")
             console.log(state)
             console.log(action.payload.data.cashouts)
-            return Object.assign({}, state, {
-                    isLoading: true,
-                    data: action.payload.data.cashouts,
-                }
-            )
+            state.data = action.payload.data.cashouts;
+            return state;
+            // return Object.assign({}, state, {
+            //         isLoading: true,
+            //         data: action.payload.data.cashouts,
+            //     }
+            // )
         }
         case LOAD_ALL_CASHOUTS_FAILURE:
             return Object.assign({}, state, {

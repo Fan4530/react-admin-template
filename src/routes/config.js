@@ -1,11 +1,12 @@
 import UserCommissions from "../components/user-commissions/user-commissions";
+import UserCashouts from "../components/user-cashouts/user-cashouts";
 
 export default {
     menus: [ // 菜单相关路由
         { idx: 'index', key: '/app/dashboard', title: 'Dashboard', icon: 'mobile', component: 'Dashboard' },
         //TODO: create a new component for each tables
         { idx: 'allUserProfiles', key: '/app/userprofiles', title: 'User Profiles', icon: 'table', component: 'UserProfiles' },
-        { idx: 'allCashouts',  key: '/app/cashouts', title: 'Cashout Request', icon: 'table', component: 'Cashouts' },
+        { idx: 'allCashouts',  key: '/app/cashouts', title: 'Cashout Request', icon: 'table', component: 'UserCashouts' },
         { idx: 'allCommissions' , key: '/app/commissions', title: 'User Commissions', icon: 'table', component: 'UserCommissions' },
         // make sure the idx is the same as the adminData type!
 

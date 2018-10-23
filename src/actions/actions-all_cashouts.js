@@ -28,7 +28,7 @@ export const loadAllCashouts = () => (dispatch, getState) => {
     let pageNumber = 1// TODO
     let body = JSON.stringify({
         pageNumber,
-        pageSize: 30 // ALL_DOTS_PAGE_SIZE = 30
+        pageSize: 20 // ALL_DOTS_PAGE_SIZE = 30
         // TODO
     });
 
