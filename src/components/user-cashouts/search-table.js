@@ -1,25 +1,28 @@
-
 import React from 'react';
-import { Table, Input, Button, Icon } from 'antd';
-import moment from "moment";
+import {Button, Icon, Input, Table} from 'antd';
 
+import Switch from "react-switch";
 
 
 class SearchTable extends React.Component {
     state = {
         filterDropdownVisibleEmail: false,
         filterDropdownVisibleUsername: false,
-
+        paymentStatusChecked: false,
         data: this.props.data,
         searchText: '',
         filtered: false,
         sortedInfo: null,
     };
     onInputChange = (e) => {
-        this.setState({ searchText: e.target.value });
+        this.setState({searchText: e.target.value});
     };
+    handlePaymentStatusChange = () => {
+        //TODO looks not good to do in this way
+        this.setState({paymentStatusChecked: !this.state.paymentStatusChecked})
+    }
     onSearchUsername = () => {
-        const { searchText } = this.state;
+        const {searchText} = this.state;
         const reg = new RegExp(searchText, 'gi');
         this.setState({
             filterDropdownVisible: false,
@@ -43,7 +46,7 @@ class SearchTable extends React.Component {
         });
     };
     onSearchEmail = () => {
-        const { searchText } = this.state;
+        const {searchText} = this.state;
         const reg = new RegExp(searchText, 'gi');
         this.setState({
             filterDropdownVisible: false,
@@ -66,15 +69,16 @@ class SearchTable extends React.Component {
             }).filter(record => !!record),
         });
     };
+
     render() {
-        let { sortedInfo } = this.state;
+        let {sortedInfo} = this.state;
         sortedInfo = sortedInfo || {};
 
-        const columns = [ {
+        const columns = [{
             title: 'key',
             dataIndex: 'key',
             key: 'key',
-            sorter: (a, b) =>  a - b,
+            sorter: (a, b) => a - b,
             sortOrder: sortedInfo.columnKey === 'name' && sortedInfo.order,
         }, {
             title: 'Name',
@@ -92,9 +96,9 @@ class SearchTable extends React.Component {
                     <Button type="primary" onClick={this.onSearchUsername}>Search</Button>
                 </div>
             ),
-            filterIcon: <Icon type="smile-o" style={{ color: this.state.filtered ? '#108ee9' : '#aaa' }} />,
+            filterIcon: <Icon type="smile-o" style={{color: this.state.filtered ? '#108ee9' : '#aaa'}}/>,
             filterDropdownVisibleUsername: this.state.filterDropdownVisibleUsername,
-            onFilterDropdownVisibleChange: visible => this.setState({ filterDropdownVisibleUsername: visible }, () => this.searchInput.focus()),
+            onFilterDropdownVisibleChange: visible => this.setState({filterDropdownVisibleUsername: visible}, () => this.searchInput.focus()),
         }, {
             title: 'Email',
             dataIndex: 'email',
@@ -111,9 +115,9 @@ class SearchTable extends React.Component {
                     <Button type="primary" onClick={this.onSearchEmail}>Search</Button>
                 </div>
             ),
-            filterIcon: <Icon type="smile-o" style={{ color: this.state.filtered ? '#108ee9' : '#aaa' }} />,
+            filterIcon: <Icon type="smile-o" style={{color: this.state.filtered ? '#108ee9' : '#aaa'}}/>,
             filterDropdownVisibleEmail: this.state.filterDropdownVisibleEmail,
-            onFilterDropdownVisibleChange: visible => this.setState({ filterDropdownVisibleEmail: visible }, () => this.searchInput.focus()),
+            onFilterDropdownVisibleChange: visible => this.setState({filterDropdownVisibleEmail: visible}, () => this.searchInput.focus()),
         }, {
             title: 'Amount',
             dataIndex: 'amount',
@@ -122,14 +126,25 @@ class SearchTable extends React.Component {
             title: 'Payment Type',
             dataIndex: 'paymentType',
             key: 'paymentType',
-        },  {
+        }, {
             title: 'Payment Status',
             dataIndex: 'paymentStatus',
-            key: 'paymentStatus',
+            render: (text, record) => {
+                return (
+                    <div>
+                        <Switch
+                            onChange={this.handlePaymentStatusChange}
+                            // TODO: this.state.paymentStatusChecked should be from data
+                            checked={this.props.data.paymentType}
+                            id="normal-switch"
+                        />
+                    </div>
+                );
+            },
         }];
         return (
             <div>
-                <Table columns={columns} dataSource={this.props.data} />
+                <Table columns={columns} dataSource={this.props.data}/>
                 <style>{`
                     .custom-filter-dropdown {
                       padding: 8px;

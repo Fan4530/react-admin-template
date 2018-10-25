@@ -23,8 +23,8 @@ class UserCashouts extends React.Component {
                 email: r.email,
                 paymentType: r.paymentType,
                 amount: r.amount,
-
-
+                paymentStatus: r.paymentStatus ? true : false,
+                id: r.id,
             }
         })
         // console.log("what is the data looks like")
