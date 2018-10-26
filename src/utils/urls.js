@@ -9,6 +9,8 @@ export const DOMAIN = '';
 
 export const LOAD_ALL_PROFILES_URL = `${DOMAIN}${API_PREFIX}/userprofile/all`;
 export const LOAD_ALL_CASHOURT_URL = `${DOMAIN}${API_PREFIX}/usercashout/all`;
+export const USERCASHOUT_SAVE_BY_ID = `${DOMAIN}${API_PREFIX}/usercashout/saveById`;
+
 export const LOAD_ALL_COMMISSIONS_URL = `${DOMAIN}${API_PREFIX}/usercommission/all`;
 
 export const CHECK_AUTH_URL = `${DOMAIN}${API_PREFIX}/auth/checkAuth`;

@@ -1,10 +1,16 @@
-
 import React, {Component} from 'react';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import AllComponents from '../components';
 import routesConfig from './config';
 
 export default class xCRouter extends Component {
+    componentWillMount() {
+        //TODO : this should be called in each component
+        this.props.actions.loadAllCashouts();
+        this.props.actions.loadAllCommissions();
+        this.props.actions.loadAllProfiles();
+    }
+
     requireAuth = (permission, component) => {
         const {auth} = this.props;
         const {permissions} = auth.data;
@@ -21,23 +27,37 @@ export default class xCRouter extends Component {
         return permission ? this.requireAuth(permission, component) : component;
     };
 
-    route = (r, data) => {
-        const Component = AllComponents[r.component];
-        console.log("check data here")
-        console.log(r)
-        console.log(data)
+    route = (r, data, actions) => {
+        const isLoading = !data ? true : data.isLoading
+        const Component = isLoading && r.component != 'Dashboard' ? AllComponents['isLanding'] : AllComponents[r.component];
+        // console.log("check data here")
+        // console.log(r)
+        // console.log(data)
+
         return (
             <Route
 
                 key={r.key}
                 exact
                 path={r.key}
-                render={props => r.login ?
-                    // TODO:
-                    // why this if else??
-                    <Component {...props}
-                               data={data}/>
-                    : this.requireLogin(<Component {...props} data={data}/>, r.auth)}
+
+                render={props =>
+
+                    <Component
+                        data={data}
+                        actions = {actions}
+                    />}
+                    // r.login ?
+                    // // TODO:
+                    // // why this if else??
+                    // <Component {...props}
+                    //            data={data}
+                    //            actions={actions}
+                    // />
+                    // : this.requireLogin(<Component {...props}
+                    //                                data={data}
+                    //                                actions={actions}
+                    // />, r.auth)}
             />
         )
     }
@@ -47,6 +67,8 @@ export default class xCRouter extends Component {
         const dataMapping = this.props.adminData
         console.log("check the data mapping")
         console.log(dataMapping)
+
+        const actions = this.props.actions;
         return (
             <Switch>
                 {
@@ -62,13 +84,13 @@ export default class xCRouter extends Component {
                             // TODO: use lodash get
                             // const data = _get(dataMapping, r.key, null).__wrapped__;
                             const data = dataMapping[r.idx]
-                            if(r.idx == 'allCommissions') {
-                                console.log("what is the data here")
-                                console.log(r)
-                                console.log(data)
-                            }
+                            // if(r.idx == 'allCashouts') {
+                            //     console.log("what is the data here")
+                            //     console.log(r)
+                            //     console.log(data)
+                            // }
 
-                            return r.component ? this.route(r, data) : r.subs.map((r, data) => this.route(r, data));
+                            return r.component ? this.route(r, data, actions) : r.subs.map((r) => this.route(r, data, actions));
                         })
                     )
                 }

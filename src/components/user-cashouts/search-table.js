@@ -1,25 +1,48 @@
-
 import React from 'react';
-import { Table, Input, Button, Icon } from 'antd';
-import moment from "moment";
+import {Button, Icon, Input, Table} from 'antd';
 
+import Switch from "react-switch";
 
 
 class SearchTable extends React.Component {
+    componentWillMount() {
+        const paymentStatusMapping = {};
+        this.props.data.map((r) => {
+            paymentStatusMapping[r.id] = r.status
+        })
+        this.setState({paymentStatusMapping: paymentStatusMapping})
+
+    }
     state = {
         filterDropdownVisibleEmail: false,
         filterDropdownVisibleUsername: false,
-
+        paymentStatusChecked: false,
         data: this.props.data,
         searchText: '',
         filtered: false,
         sortedInfo: null,
+        paymentStatusMapping: Object,
     };
     onInputChange = (e) => {
-        this.setState({ searchText: e.target.value });
+        this.setState({searchText: e.target.value});
     };
+    handlePaymentStatusChange = (record) => {
+        const request = {
+            id: record.id,
+            // should be opposite of the original status
+            status: record.status ? "REQUESTED" : "PAID"
+        }
+
+        this.props.saveCashoutById(request);
+
+        let newData = this.state.data;
+        newData[record.key].status = !record.status;
+        this.setState({data:newData})
+
+
+    }
     onSearchUsername = () => {
-        const { searchText } = this.state;
+        const {searchText} = this.state;
         const reg = new RegExp(searchText, 'gi');
         this.setState({
             filterDropdownVisible: false,
@@ -43,7 +66,7 @@ class SearchTable extends React.Component {
         });
     };
     onSearchEmail = () => {
-        const { searchText } = this.state;
+        const {searchText} = this.state;
         const reg = new RegExp(searchText, 'gi');
         this.setState({
             filterDropdownVisible: false,
@@ -66,25 +89,27 @@ class SearchTable extends React.Component {
             }).filter(record => !!record),
         });
     };
+
     render() {
-        let { sortedInfo } = this.state;
+        let {sortedInfo} = this.state;
         sortedInfo = sortedInfo || {};
 
-        const columns = [ {
+
+        const columns = [{
             title: 'key',
             dataIndex: 'key',
             key: 'key',
-            sorter: (a, b) =>  a - b,
+            sorter: (a, b) => a - b,
             sortOrder: sortedInfo.columnKey === 'name' && sortedInfo.order,
         }, {
-            title: 'User Name',
-            dataIndex: 'username',
-            key: 'username',
+            title: 'Name',
+            dataIndex: 'name',
+            key: 'name',
             filterDropdown: (
                 <div className="custom-filter-dropdown">
                     <Input
                         ref={ele => this.searchInput = ele}
-                        placeholder="Search username"
+                        placeholder="Search name"
                         value={this.state.searchText}
                         onChange={this.onInputChange}
                         onPressEnter={this.onSearchUsername}
@@ -92,9 +117,9 @@ class SearchTable extends React.Component {
                     <Button type="primary" onClick={this.onSearchUsername}>Search</Button>
                 </div>
             ),
-            filterIcon: <Icon type="smile-o" style={{ color: this.state.filtered ? '#108ee9' : '#aaa' }} />,
+            filterIcon: <Icon type="smile-o" style={{color: this.state.filtered ? '#108ee9' : '#aaa'}}/>,
             filterDropdownVisibleUsername: this.state.filterDropdownVisibleUsername,
-            onFilterDropdownVisibleChange: visible => this.setState({ filterDropdownVisibleUsername: visible }, () => this.searchInput.focus()),
+            onFilterDropdownVisibleChange: visible => this.setState({filterDropdownVisibleUsername: visible}, () => this.searchInput.focus()),
         }, {
             title: 'Email',
             dataIndex: 'email',
@@ -111,67 +136,37 @@ class SearchTable extends React.Component {
                     <Button type="primary" onClick={this.onSearchEmail}>Search</Button>
                 </div>
             ),
-            filterIcon: <Icon type="smile-o" style={{ color: this.state.filtered ? '#108ee9' : '#aaa' }} />,
+            filterIcon: <Icon type="smile-o" style={{color: this.state.filtered ? '#108ee9' : '#aaa'}}/>,
             filterDropdownVisibleEmail: this.state.filterDropdownVisibleEmail,
-            onFilterDropdownVisibleChange: visible => this.setState({ filterDropdownVisibleEmail: visible }, () => this.searchInput.focus()),
+            onFilterDropdownVisibleChange: visible => this.setState({filterDropdownVisibleEmail: visible}, () => this.searchInput.focus()),
         }, {
-            title: 'First Name',
-            dataIndex: 'firstName',
-            key: 'firstName',
+            title: 'Amount',
+            dataIndex: 'amount',
+            key: 'amount',
         }, {
-            title: 'Last Name',
-            dataIndex: 'lasttName',
-            key: 'lastName',
+            title: 'Payment Type',
+            dataIndex: 'paymentType',
+            key: 'paymentType',
         }, {
-            title: 'Created By',
-            dataIndex: 'createdBy',
-            key: 'createdBy',
-        }, {
-            title: 'Email CNF',
-            dataIndex: 'emailCNF',
-            key: 'emailCNF',
-            filters: [{
-                text: 'Confirmed',
-                value: 'true',
-            }, {
-                text: 'Unconfirmed',
-                value: 'false',
-            }],
-            onFilter: (value, record) => {
-                // console.log("temm me the recor")
-                // console.log(value)
-                // console.log(record)
-                return record.emailCNF.indexOf(value) === 0
-            }
-        }, {
-            title: 'type',
-            dataIndex: 'type',
-            key: 'type',
-            filters: [{
-                text: 'CUSTOMER',
-                value: 'CUSTOMER',
-            }, {
-                text: 'RETAILER',
-                value: 'RETAILER',
-            }],
-            // filters: [{
-            //     text: 'Confirmed',
-            //     value: 'true',
-            // }, {
-            //     text: 'Unconfirmed',
-            //     value: 'false',
-            // }],
-            onFilter: (value, record) => record.type.indexOf(value) === 0,
-        }, {
-            title: 'Registration Date',
-            dataIndex: 'registrationDate',
-            key: 'registrationDate',
-            sorter: (a, b) =>  moment(a).isAfter(moment(b)) ? 1 : -1,
-            sortOrder: sortedInfo.columnKey === 'registrationDate' && sortedInfo.order,
-        }, ];
+            title: 'Payment Status',
+            dataIndex: 'paymentStatus',
+            render: (text, record) => {
+
+                return (
+                    <div>
+                        <Switch
+                            onChange={() => this.handlePaymentStatusChange(record)}
+                            checked={record.status}
+                            id="normal-switch"
+                        />
+                    </div>
+                );
+            },
+        }];
+
         return (
             <div>
-                <Table columns={columns} dataSource={this.props.data} />
+                <Table columns={columns} dataSource={this.state.data}/>
                 <style>{`
                     .custom-filter-dropdown {
                       padding: 8px;

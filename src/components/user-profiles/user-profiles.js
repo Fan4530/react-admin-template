@@ -8,9 +8,9 @@ class UserProfiles extends React.Component {
 
 
     render() {
-        console.log("check data table")
-        console.log(this.props)
-        console.log(this.props.data)
+        // console.log("check data table")
+        // console.log(this.props)
+        // console.log(this.props.data)
         const preData = this.props.data.data;
         if(!preData) {
             return null
@@ -18,9 +18,9 @@ class UserProfiles extends React.Component {
         const data = preData.map((r, i) => {
 
             const registrationDate = moment(r.createdDate).format("YYYY-MM-DD HH:mm")
-            console.log("time")
-            console.log(registrationDate)
-            console.log(r)
+            // console.log("time")
+            // console.log(registrationDate)
+            // console.log(r)
             return {
                 key: i,
                 username: r.name,
@@ -33,8 +33,8 @@ class UserProfiles extends React.Component {
                 registrationDate,
             }
         })
-        console.log("what is the data looks like")
-        console.log(data)
+        // console.log("what is the data looks like")
+        // console.log(data)
 
         return (
             <div>

@@ -5,8 +5,8 @@ import {
 } from "../actions/actions-all_commissions";
 
 export const initialState = {
-    data: [9,9],
-    isLoading: false,
+    data: [],
+    isLoading: true,
     isErrored: false,
     nextPageNumber: 0
 };
@@ -16,18 +16,18 @@ export const initialState = {
 export const allCommissions = (state = initialState, action) => {
     switch (action.type) {
         case LOAD_ALL_COMMISSIONS_REQUEST: {
-            console.log("what is the request state")
-            console.log(state)
+            // console.log("what is the request state")
+            // console.log(state)
             return Object.assign({}, state, {
                 isLoading: true,
 
             })
         }
         case LOAD_ALL_COMMISSIONS_SUCCESS:
-            console.log("what is the succuss state commissions")
-            console.log(state)
-            console.log(action.payload.data.allCommissions)
-            console.log("show me the new state");
+            // console.log("what is the succuss state commissions")
+            // console.log(state)
+            // console.log(action.payload.data.allCommissions)
+            // console.log("show me the new state");
 
             // const newState =  state.setState('data', action.payload.data.allCommissions, breakWhil)
             // console.log("show me the new state");
@@ -51,6 +51,7 @@ export const allCommissions = (state = initialState, action) => {
 
             // TODO: this is wrong, but why returning a state cannot change state
             state.data = action.payload.data.allCommissions;
+            state.isLoading = false;
             return state;
 
 

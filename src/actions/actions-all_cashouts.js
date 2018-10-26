@@ -28,7 +28,7 @@ export const loadAllCashouts = () => (dispatch, getState) => {
     let pageNumber = 1// TODO
     let body = JSON.stringify({
         pageNumber,
-        pageSize: 30 // ALL_DOTS_PAGE_SIZE = 30
+        pageSize: 20 // ALL_DOTS_PAGE_SIZE = 30
         // TODO
     });
 
@@ -43,8 +43,8 @@ export const loadAllCashouts = () => (dispatch, getState) => {
     })
         .then(response => response.json())
         .then(json => {
-            console.log("what is the json")
-            console.log(json)
+            // console.log("what is the json")
+            // console.log(json)
             if (json.ServiceResponse &&
                 json.ServiceResponse.responseCode === 'SUCCESS') {
                 let payload = { //  define yourself, this will be used in reducer
@@ -54,16 +54,16 @@ export const loadAllCashouts = () => (dispatch, getState) => {
                     },
                     nextPageNumber: pageNumber
                 };
-                console.log("show me the playload")
-                console.log(payload)
+                // console.log("show me the playload")
+                // console.log(payload)
                 dispatch(loadAllCashoutsSuccess(payload));
             } else {
                 dispatch(loadAllCashoutsFailure());
             }
         })
         .catch(error => {
-            console.log(error);
-            console.log("fail catch error")
+            // console.log(error);
+            // console.log("fail catch error")
             dispatch(loadAllCashoutsFailure());
         });
 };
