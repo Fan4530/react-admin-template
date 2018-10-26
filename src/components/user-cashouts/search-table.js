@@ -5,6 +5,14 @@ import Switch from "react-switch";
 
 
 class SearchTable extends React.Component {
+    componentWillMount() {
+        const paymentStatusMapping = {};
+        this.props.data.map((r) => {
+            paymentStatusMapping[r.id] = r.status
+        })
+        this.setState({paymentStatusMapping: paymentStatusMapping})
+
+    }
     state = {
         filterDropdownVisibleEmail: false,
         filterDropdownVisibleUsername: false,
@@ -13,13 +21,25 @@ class SearchTable extends React.Component {
         searchText: '',
         filtered: false,
         sortedInfo: null,
+        paymentStatusMapping: Object,
     };
     onInputChange = (e) => {
         this.setState({searchText: e.target.value});
     };
-    handlePaymentStatusChange = () => {
-        //TODO looks not good to do in this way
-        this.setState({paymentStatusChecked: !this.state.paymentStatusChecked})
+    handlePaymentStatusChange = (record) => {
+        const request = {
+            id: record.id,
+            // should be opposite of the original status
+            status: record.status ? "REQUESTED" : "PAID"
+        }
+
+        this.props.saveCashoutById(request);
+
+        let newData = this.state.data;
+        newData[record.key].status = !record.status;
+        this.setState({data:newData})
+
+
     }
     onSearchUsername = () => {
         const {searchText} = this.state;
@@ -73,6 +93,7 @@ class SearchTable extends React.Component {
     render() {
         let {sortedInfo} = this.state;
         sortedInfo = sortedInfo || {};
+
 
         const columns = [{
             title: 'key',
@@ -130,21 +151,22 @@ class SearchTable extends React.Component {
             title: 'Payment Status',
             dataIndex: 'paymentStatus',
             render: (text, record) => {
+
                 return (
                     <div>
                         <Switch
-                            onChange={this.handlePaymentStatusChange}
-                            // TODO: this.state.paymentStatusChecked should be from data
-                            checked={this.props.data.paymentType}
+                            onChange={() => this.handlePaymentStatusChange(record)}
+                            checked={record.status}
                             id="normal-switch"
                         />
                     </div>
                 );
             },
         }];
+
         return (
             <div>
-                <Table columns={columns} dataSource={this.props.data}/>
+                <Table columns={columns} dataSource={this.state.data}/>
                 <style>{`
                     .custom-filter-dropdown {
                       padding: 8px;

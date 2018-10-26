@@ -23,7 +23,7 @@ class UserCashouts extends React.Component {
                 email: r.email,
                 paymentType: r.paymentType,
                 amount: r.amount,
-                paymentStatus: r.paymentStatus ? true : false,
+                status: r.status == 'REQUESTED' || r.status == 'FAILED' ? false : true,
                 id: r.id,
             }
         })
@@ -32,7 +32,10 @@ class UserCashouts extends React.Component {
 
         return (
             <div>
-                <SearchTable data={data}/>
+                <SearchTable data={data}
+                             saveCashoutById = {this.props.actions.saveCashoutById}
+                             loadAllCashouts = {this.props.actions.loadAllCashouts}
+                />
             </div>
         );
     }
